@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Fire Pro League</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Rajdhani', sans-serif;
+        background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1e1e2f);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: #ffffff;
+      }
+      @keyframes gradient {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+      }
+      .btn {
+        @apply px-6 py-3 bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500 text-white rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:brightness-110;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col items-center text-center px-4">
+
+    <!-- Navbar -->
+    <nav class="w-full bg-black bg-opacity-30 backdrop-blur-md py-4 px-6 fixed top-0 z-50 flex justify-between items-center shadow-lg">
+      <h1 class="text-xl md:text-2xl font-bold text-yellow-400">FF Pro League</h1>
+      <div class="space-x-4">
+        <a href="#hero" class="text-gray-200 hover:text-yellow-300">Home</a>
+        <a href="#rules" class="text-gray-200 hover:text-yellow-300">Rules</a>
+        <a href="#playmodes" class="text-gray-200 hover:text-yellow-300">Modes</a>
+        <a href="#contact" class="text-gray-200 hover:text-yellow-300">Contact</a>
+      </div>
+    </nav>
+
+    <div class="mt-24"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero bg-black bg-opacity-30 p-6 rounded-xl max-w-2xl w-full mb-10 shadow-xl">
+      <h2 class="text-3xl md:text-4xl text-pink-400 font-semibold">Next Tournament Starts Soon!</h2>
+      <p class="mt-2 text-gray-200">Register now to compete and win amazing prizes!</p>
+      <a class="btn mt-4 inline-block" href="https://wa.me/919872732823" target="_blank">Register on WhatsApp</a>
+    </section>
+
+    <!-- Rules -->
+    <section id="rules" class="rules bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-xl max-w-xl w-full mb-10">
+      <h2 class="text-xl text-yellow-300 font-bold mb-4">Rules</h2>
+      <ul class="text-left space-y-2 text-sm md:text-base text-gray-200 list-disc list-inside">
+        <li>No hacks or third-party tools allowed</li>
+        <li>All players must join on time</li>
+        <li>Teams must consist of 4 members</li>
+        <li>Final decisions are made by the organizer</li>
+      </ul>
+    </section>
+
+    <!-- Play Modes Section -->
+    <section id="playmodes" class="w-full max-w-4xl mb-12">
+      <h2 class="text-2xl text-pink-300 font-bold mb-6">Choose Match Mode</h2>
+      <div class="flex flex-wrap justify-center gap-4 mb-6" id="modeButtons">
+        <button class="btn mode-btn" data-mode="1v1">1v1</button>
+        <button class="btn mode-btn" data-mode="2v2">2v2</button>
+        <button class="btn mode-btn bg-green-500 text-black font-bold" data-mode="free">Free Tournaments</button>
+      </div>
+
+      
+<div id="paymentSection" class="hidden bg-black bg-opacity-30 backdrop-blur-md p-6 rounded-xl shadow-xl mt-6">
+  <h3 class="text-xl text-yellow-300 font-semibold mb-4">Next Step: Registration</h3>
+
+  <div class="mb-6">
+    <p class="text-gray-300 mb-2 font-medium">Step 1: Choose a Payment Option</p>
+    <ul class="text-left text-gray-300 list-disc list-inside mb-4 space-y-1 text-sm">
+      <li>UPI ID: <strong>ffpro@upi</strong></li>
+      <li>Paytm: <strong>9872732823</strong></li>
+      <li>PhonePe: <strong>ffleague@ybl</strong></li>
+    </ul>
+    <img src="https://via.placeholder.com/200x200.png?text=QR+Code" alt="QR Code" class="mx-auto mb-2 w-40 h-40" />
+    <p class="text-gray-400 text-sm">Scan the QR above or use one of the above options to pay.</p>
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-left text-sm text-gray-300 mb-1" for="refid">Payment Reference ID:</label>
+    <input type="text" id="refid" placeholder="Enter Payment Reference ID" class="w-full bg-gray-800 text-white p-2 rounded" />
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-left text-sm text-gray-300 mb-1" for="screenshot">Upload Payment Screenshot:</label>
+    <input type="file" id="screenshot" class="w-full bg-gray-800 text-white p-2 rounded" />
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-left text-sm text-gray-300 mb-1" for="uid">Your UID:</label>
+    <input type="text" id="uid" placeholder="Enter UID" class="w-full bg-gray-800 text-white p-2 rounded" />
+  </div>
+  <div class="mb-6">
+    <label class="block text-left text-sm text-gray-300 mb-1" for="level">Your Level:</label>
+    <input type="text" id="level" placeholder="Enter Player Level" class="w-full bg-gray-800 text-white p-2 rounded" />
+  </div>
+
+  <button class="btn">Submit</button>
+</div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-xl max-w-xl w-full mb-10">
+      <h2 class="text-xl text-pink-300 font-bold mb-3">Contact Us</h2>
+      <p class="text-gray-200">Email: sandeepxo5566@gmail.com</p>
+      <p class="text-gray-200">WhatsApp: +91 9872732823</p>
+    </section>
+
+    <footer class="py-6 text-sm text-gray-400">
+      © 2025 Free Fire Pro League. All rights reserved.
+    </footer>
+
+    <audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+    
+<script>
+  const buttons = document.querySelectorAll('.mode-btn');
+  const sound = document.getElementById('clickSound');
+  const paymentSection = document.getElementById('paymentSection');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('ring-4', 'ring-yellow-300', 'scale-110'));
+      btn.classList.add('ring-4', 'ring-yellow-300', 'scale-110');
+      sound.play();
+
+      const selectedMode = btn.dataset.mode;
+      if (selectedMode === '1v1' || selectedMode === '2v2') {
+        paymentSection.classList.remove('hidden');
+      } else {
+        paymentSection.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+  </body>
+</html>
