@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complete Payment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1e1e2f);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: #ffffff;
+    }
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .btn {
+      @apply px-6 py-3 bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500 text-white rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:brightness-110;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center px-4 py-8 text-center">
+  <h2 class="text-3xl text-yellow-300 font-bold mb-4">💳 Complete Your Payment</h2>
+  <p id="payInfo" class="text-lg text-green-400 mb-6">Loading payment details...</p>
+  <img src="https://via.placeholder.com/200x200.png?text=QR+Code" alt="QR Code" class="mb-4 w-40 h-40 rounded shadow-xl" />
+  <div class="mb-4 w-full max-w-md text-left">
+    <label class="block mb-1" for="refid">Reference ID:</label>
+    <input type="text" id="refid" placeholder="Enter Payment Reference ID" class="w-full p-2 bg-gray-800 text-white rounded"/>
+  </div>
+  <div class="mb-4 w-full max-w-md text-left">
+    <label class="block mb-1" for="screenshot">Upload Payment Screenshot:</label>
+    <input type="file" id="screenshot" class="w-full p-2 bg-gray-800 text-white rounded"/>
+  </div>
+  <button class="btn mt-4" onclick="submitPayment()">Submit</button>
+  <p id="confirmation" class="text-green-400 mt-4 hidden">✅ You are registered!</p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const amount = urlParams.get('amount');
+    const win = urlParams.get('win');
+    const mode = urlParams.get('mode');
+    document.getElementById('payInfo').textContent = `Mode: ${mode.toUpperCase()} | Entry: ₹${amount} → Win: ₹${win}`;
+
+    function submitPayment() {
+      document.getElementById('confirmation').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
