@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free Fire Pro League</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+      body {
+        font-family: 'Rajdhani', sans-serif;
+        background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1e1e2f);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: #ffffff;
+      }
+      @keyframes gradient {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+      }
+      .btn {
+        @apply px-6 py-3 bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500 text-white rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:brightness-110;
+      }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center text-center px-4">
+<nav class="w-full bg-black bg-opacity-40 backdrop-blur-md p-4 flex justify-between items-center shadow-lg fixed top-0 z-50">
+<h1 class="text-xl md:text-2xl font-bold text-yellow-400">FF Pro League</h1>
+<div class="space-x-4">
+<a class="text-gray-200 hover:text-yellow-300" href="#hero">Home</a>
+<a class="text-gray-200 hover:text-yellow-300" href="#rules">Rules</a>
+<a class="text-gray-200 hover:text-yellow-300" href="#playmodes">Modes</a>
+<a class="text-gray-200 hover:text-yellow-300" href="#contact">Contact</a>
+</div>
+</nav>
+<div class="mt-24"></div>
+<!-- Navbar -->
+<!-- Removed Top Navbar -->
+<!-- <nav
+      <h1 class="text-xl md:text-2xl font-bold text-yellow-400">FF Pro League</h1>
+      <div class="space-x-4">
+        <a href="#hero" class="text-gray-200 hover:text-yellow-300">Home</a>
+        <a href="#rules" class="text-gray-200 hover:text-yellow-300">Rules</a>
+        <a href="#playmodes" class="text-gray-200 hover:text-yellow-300">Modes</a>
+        <a href="#contact" class="text-gray-200 hover:text-yellow-300">Contact</a>
+      </div>
+    </nav> -->
+<div class="mt-24"></div>
+<!-- Hero Section -->
+<section class="hero bg-black bg-opacity-30 p-6 rounded-xl max-w-2xl w-full mb-10 shadow-xl" id="hero">
+<h2 class="text-3xl md:text-4xl text-pink-400 font-semibold">Next Tournament Starts Soon!</h2>
+<p class="mt-2 text-gray-200">Register now to compete and win amazing prizes!</p>
+<a class="btn mt-4 inline-block" href="https://wa.me/919872732823" target="_blank">Register on WhatsApp</a>
+</section>
+<!-- Rules -->
+<!-- RULES MOVED TO BOTTOM --><section class="rules bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-xl max-w-xl w-full mb-10" id="rules">
+<h2 class="text-xl text-yellow-300 font-bold mb-4">Rules</h2>
+<ul class="text-left space-y-2 text-sm md:text-base text-gray-200 list-disc list-inside">
+<li>No hacks or third-party tools allowed</li>
+<li>All players must join on time</li>
+<li>Teams must consist of 4 members</li>
+<li>Final decisions are made by the organizer</li>
+</ul>
+</section>
+<!-- Play Modes Section -->
+<section class="w-full max-w-4xl mb-12" id="playmodes">
+<h2 class="text-2xl text-pink-300 font-bold mb-6">🎮 Choose Match Mode</h2>
+<div class="flex flex-wrap justify-center gap-4 mb-6" id="modeButtons">
+<button class="btn mode-btn flex items-center space-x-2" data-mode="1v1">
+<img alt="1v1" class="w-5 h-5" src="https://img.icons8.com/ios-filled/50/controller.png"/>
+<span>1v1</span>
+</button>
+<button class="btn mode-btn flex items-center space-x-2" data-mode="2v2">
+<img alt="2v2" class="w-5 h-5" src="https://img.icons8.com/ios-filled/50/controller.png"/>
+<span>2v2</span>
+</button>
+<button class="btn mode-btn bg-green-500 text-black font-bold flex items-center space-x-2" data-mode="free">
+<img alt="Free" class="w-5 h-5" src="https://img.icons8.com/ios-filled/50/trophy.png"/>
+<span>Free Tournaments</span>
+</button>
+</div>
+
+
+<!-- New Option Interface for 1v1 -->
+<div class="hidden bg-black bg-opacity-30 backdrop-blur-md p-6 rounded-xl shadow-xl mt-6 w-full max-w-xl text-center" id="optionsInterface">
+<h3 class="text-2xl text-yellow-300 font-bold mb-4">Choose Your Entry</h3>
+<div class="grid grid-cols-1 gap-4">
+<a class="btn text-xl" href="payment.html?mode=1v1&amp;amount=9&amp;win=15">💰 ₹9 to Win ₹15</a>
+<a class="btn text-xl" href="payment.html?mode=1v1&amp;amount=15&amp;win=25">🏆 ₹15 to Win ₹25</a>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="contact bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-xl max-w-xl w-full mb-10" id="contact">
+<h2 class="text-xl text-pink-300 font-bold mb-3">Contact Us</h2>
+<p class="text-gray-200">Email: sandeepxo5566@gmail.com</p>
+<p class="text-gray-200">WhatsApp: +91 9872732823</p>
+</section>
+<section class="w-full max-w-4xl bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-xl shadow-xl mb-12 mt-8">
+<h2 class="text-xl text-green-400 font-bold mb-4">⏱ Match Starts At: <span class="text-white">7:00 PM IST</span></h2>
+<h3 class="text-lg text-yellow-300 font-semibold mb-2">Registered Players</h3>
+<table class="table-auto w-full text-left text-sm text-gray-200">
+<thead>
+<tr class="text-pink-400 border-b border-gray-600">
+<th class="px-4 py-2">UID</th>
+<th class="px-4 py-2">Level</th>
+<th class="px-4 py-2">Payment Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-gray-800">
+<td class="px-4 py-2">123456789</td>
+<td class="px-4 py-2">45</td>
+<td class="px-4 py-2 text-green-400">✅ Paid</td>
+</tr>
+<tr class="hover:bg-gray-800">
+<td class="px-4 py-2">987654321</td>
+<td class="px-4 py-2">52</td>
+<td class="px-4 py-2 text-green-400">✅ Paid</td>
+</tr>
+<tr class="hover:bg-gray-800">
+<td class="px-4 py-2">654321987</td>
+<td class="px-4 py-2">38</td>
+<td class="px-4 py-2 text-red-400">❌ Pending</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="rules bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-xl max-w-xl w-full mb-10" id="rules">
+<h2 class="text-xl text-yellow-300 font-bold mb-4">Rules</h2>
+<ul class="text-left space-y-2 text-sm md:text-base text-gray-200 list-disc list-inside">
+<li>No hacks or third-party tools allowed</li>
+<li>All players must join on time</li>
+<li>Teams must consist of 4 members</li>
+<li>Final decisions are made by the organizer</li>
+</ul>
+</section>
+<footer class="py-6 text-sm text-gray-400">
+      © 2025 Free Fire Pro League. All rights reserved.
+    </footer>
+<audio id="clickSound" preload="auto" src="https://www.fesliyanstudios.com/play-mp3/387"></audio>
+<script>
+const buttons = document.querySelectorAll('.mode-btn');
+const sound = document.getElementById('clickSound');
+const optionsInterface = document.getElementById('optionsInterface');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('ring-4', 'ring-yellow-300', 'scale-110'));
+    btn.classList.add('ring-4', 'ring-yellow-300', 'scale-110');
+    sound.play();
+
+    const selectedMode = btn.dataset.mode;
+
+    if (selectedMode === '1v1') {
+      optionsInterface.classList.remove('hidden');
+    } else {
+      optionsInterface.classList.add('hidden');
+      if (selectedMode === '2v2') {
+        window.location.href = 'payment.html?mode=2v2&amount=15&win=25';
+      } else if (selectedMode === 'free') {
+        window.location.href = 'payment.html?mode=free&amount=0&win=Free';
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>
